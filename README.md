@@ -9,14 +9,8 @@
 Целью работы является разработка точного алгоритма извлекающий MIDI-представление из музыки.
 
 ## Проведенные эксперименты
- - Demucs
- - Jointist?
- - BandSplitRNN
 
----------------------
-
-## Requirements
-All criteria for libraries are specified in the file "requirements.txt".
+TODO: ноутбук с картинками спектрограмм получившиеся из demucs
 
 ## Usage
 
