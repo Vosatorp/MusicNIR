@@ -7,7 +7,6 @@ import scipy
 import sounddevice as sd
 
 
-# make function get_max_energy_freq
 def get_max_energy_freqs(y, sr, window=15):
     S = librosa.stft(y)
     S_db = librosa.amplitude_to_db(np.abs(S), ref=np.max)
