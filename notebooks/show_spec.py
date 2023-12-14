@@ -1,4 +1,6 @@
 import os
+import pdb
+
 import librosa
 import librosa.display
 import matplotlib.pyplot as plt
@@ -33,7 +35,7 @@ def get_fund_freqs(y, sr, window=15):
     return fund_freqs
 
 
-def show_spec(y, sr, file_path='online', window=15):
+def show_spec(y, sr, file_path, subdir, filename, window=15):
     S = librosa.stft(y)
     S_db = librosa.amplitude_to_db(np.abs(S), ref=np.max)
 
@@ -49,38 +51,47 @@ def show_spec(y, sr, file_path='online', window=15):
     ax[1].set_yscale('log')  # установка логарифмической шкалы для оси игрек
     ax[1].plot(librosa.times_like(fund_freqs), fund_freqs, label='fund freqs from librosa')
     ax[1].legend()
-    plt.show()
+
+    new_subdir = os.path.join('figures', subdir)
+    if not os.path.exists(new_subdir):
+        os.makedirs(new_subdir)
+    plt.savefig(os.path.join(new_subdir, f'{os.path.splitext(filename)[0]}.png'), bbox_inches='tight', format='png')
+    plt.close()
 
 
 def show_demucs_separated():
     # Папка с аудиофайлами
-    audio_folder = "separated/htdemucs"
+    # audio_folder = "separated/htdemucs"
+    audio_folder = "demucs_separated/mdx_extra"
     # Проходимся по всем файлам в папке
+    # pdb.set_trace()
     for subdir in os.listdir(audio_folder):
-        for filename in os.listdir(os.path.join(audio_folder, subdir)):
-            # Получаем путь к файлу
-            file_path = os.path.join(audio_folder, subdir, filename)
+        print(subdir)
+        res = input("Получать картинки из этого файла?\n>>> ")
+        if res:
+            for filename in os.listdir(os.path.join(audio_folder, subdir)):
+                # Получаем путь к файлу
+                file_path = os.path.join(audio_folder, subdir, filename)
 
-            # Загружаем аудиофайл и вычисляем его спектрограмму
-            samepls, sr = librosa.load(file_path)
-            show_spec(samepls, sr, file_path)
-            # show_fundamental_frequency(subdir, filename)
-        break  # debug
+                # Загружаем аудиофайл и вычисляем его спектрограмму
+                samepls, sr = librosa.load(file_path)
+                show_spec(samepls, sr, file_path, subdir, filename)
+                # show_fundamental_frequency(subdir, filename)
 
-# show_demucs_separated()
+show_demucs_separated()
 
-sr = 22050  # Частота дискретизации
-
-filename = input('Введите имя аудио-файла или нажмите Enter чтобы записать аудиопоток\n')
-duration = int(input('Введите длительность аудио-файла в секундах\n'))
-if not filename:
-    # Получаем аудио-поток и дискретизацию
-    samples = sd.rec(int(duration * sr), samplerate=sr, channels=1)[:, 0]
-    sd.wait()  # Ждем, пока запись закончится
-    file_path = 'online'
-else:
-    samples, sr = librosa.load(filename)
-    samples = samples[:int(duration * sr)]
-    file_path = filename
-
-show_spec(samples, sr, file_path)
+# sr = 22050  # Частота дискретизации
+#
+# filename = input('Введите имя аудио-файла или нажмите Enter чтобы записать аудиопоток\n')
+# duration = int(input('Введите длительность аудио-файла в секундах\n'))
+# if not filename:
+#     # Получаем аудио-поток и дискретизацию
+#     samples = sd.rec(int(duration * sr), samplerate=sr, channels=1)[:, 0]
+#     sd.wait()  # Ждем, пока запись закончится
+#     file_path = 'online'
+# else:
+#     samples, sr = librosa.load(filename)
+#     samples = samples[:int(duration * sr)]
+#     file_path = filename
+#
+# show_spec(samples, sr, file_path)

@@ -2,3 +2,4 @@ tracks
 demucs_separated
 notebooks/audio_to_midi
 notebooks/.ipynb_checkpoints
+figures/

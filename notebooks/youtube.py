@@ -12,7 +12,10 @@ links = [
     # 'https://youtu.be/i7o5erke_iU',  # Супермаркет
     # 'https://youtu.be/RB-RcX5DS5A',  # Scientist
     # 'https://youtu.be/bIssr5UumZU',  # Ne Angel Lizer
-    'https://youtu.be/yKNxeF4KMsY',  # Colplay - Yellow
+    # 'https://youtu.be/yKNxeF4KMsY',  # Colplay - Yellow
+    # 'https://youtu.be/83RUhxsfLWs?si=AJMyAxSm61-lMeYp',  # NEFFEX - Grateful
+    # 'https://youtu.be/kXYiU_JCYtU?si=Fs8FZA6Odxv0YP8k',  # Linkin Park - Numb
+    'https://youtu.be/k7UuSWRSEHA?si=lNPFKvTru1XUd2pD',  # Ed Sheeran - Bad Habits | Piano Cover by Pianella Piano
 ]
 
 if not os.path.exists('tracks'):
