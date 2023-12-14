@@ -1,8 +1,25 @@
-# Automatic Music Transcription
+.. |test| |codecov| |docs|
 
-**Автор:** Дмитрий Протасов
+.. .. |test| image:: https://github.com/gregkseno/master-thesis/workflows/test/badge.svg
+..    :target: https://github.com/gregkseno/master-thesis/tree/master
+..    :alt: Test status
+    
+.. .. |codecov| image:: https://img.shields.io/codecov/c/github/intsystems/ProjectTemplate/master
+..    :target: https://app.codecov.io/gh/intsystems/ProjectTemplate
+..    :alt: Test coverage
+    
+.. .. |docs| image:: https://github.com/gregkseno/master-thesis/workflows/docs/badge.svg
+..    :target: https://intsystems.github.io/ProjectTemplate/
+..    :alt: Docs status
 
-**Консультант/эксперт:** --
+
+.. class:: center
+
+    :Title: Automatic Music Transcription
+    :Type: Magister's Thesis
+    :Author: Dmitry Protasov
+    :Supervisor: Ivan Matveev
+
 
 ## Постановка задачи
 
