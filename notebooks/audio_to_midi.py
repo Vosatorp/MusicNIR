@@ -21,7 +21,6 @@ else:
 
 print("Starting...")
 # file_in = sys.argv[1]
-# file_in = "tracks/Adelya - сентябрь.m4a"
 file_out = "output.mid"
 # y, sr = librosa.load(file_in, sr=None)
 print("Audio file loaded!")

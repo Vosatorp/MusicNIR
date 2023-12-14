@@ -11,8 +11,7 @@ y = y[:220_500]
 print(type(y), y.shape, sr)
 print('DEBUG')
 print(help(crepe))
-time, frequency, confidence, \
-activation = crepe.predict(y[:100], sr, viterbi=True)
+time, frequency, confidence, activation = crepe.predict(y[:100], sr, viterbi=True)
 print('time', time.shape, time)
 notes = librosa.hz_to_midi(frequency)
 

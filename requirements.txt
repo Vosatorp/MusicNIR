@@ -1,6 +1,6 @@
 scikits.audiolab
 torch==1.7.1
-git+https://github.com/FelixGSE/pypiano.git
+# git+https://github.com/FelixGSE/pypiano.git
 virtualenv
 sound_to_midi
 pydub
@@ -16,7 +16,7 @@ bytesep==0.1.1
 pretty_midi
 audio-to-midi
 miditoolkit==0.1.13
-git+https://github.com/openai/whisper.git
+# git+https://github.com/openai/whisper.git
 transformers
 crepe
 onnxruntime
