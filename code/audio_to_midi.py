@@ -1,7 +1,7 @@
 import sys
+
 import librosa
 import sounddevice as sd
-
 # from audio_to_midi.monophonic import wave_to_midi
 from sound_to_midi import wave_to_midi
 

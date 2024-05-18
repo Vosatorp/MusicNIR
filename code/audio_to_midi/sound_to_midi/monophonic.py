@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-import numpy as np
 import librosa
 import midiutil
+import numpy as np
 
 
 def transition_matrix(

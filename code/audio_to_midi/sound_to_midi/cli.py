@@ -3,8 +3,8 @@
 import sys
 
 import librosa
-
 from sound_to_midi.monophonic import wave_to_midi
+
 
 def run():
     print("Starting...")

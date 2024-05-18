@@ -1,7 +1,8 @@
-import numpy as np
-import matplotlib.pyplot as plt
-import sounddevice as sd
 import time
+
+import matplotlib.pyplot as plt
+import numpy as np
+import sounddevice as sd
 
 # настройки звуковой карты и микрофона
 sample_rate = 44100

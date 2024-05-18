@@ -1,6 +1,8 @@
-import pretty_midi
 import random
+
+import pretty_midi
 from pydub import AudioSegment
+
 # from pydub.generators import FluidSynth
 
 def create_piano_sound():

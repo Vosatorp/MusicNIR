@@ -1,7 +1,7 @@
-import torch
 import demucs
-import soundfile as sf
 import numpy as np
+import soundfile as sf
+import torch
 
 # Загружаем модель Demucs
 model = demucs.pretrained.DEMUCS_SEPARATE_STEMS_4()

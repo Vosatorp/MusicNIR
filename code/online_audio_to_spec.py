@@ -1,7 +1,7 @@
-import numpy as np
-import matplotlib.pyplot as plt
 import librosa
 import librosa.display
+import matplotlib.pyplot as plt
+import numpy as np
 import sounddevice as sd
 
 # Задаем параметры для записи аудио

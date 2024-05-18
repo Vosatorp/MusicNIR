@@ -1,7 +1,7 @@
 import crepe
-import numpy as np
-import matplotlib.pyplot as plt
 import librosa
+import matplotlib.pyplot as plt
+import numpy as np
 
 filename = 'audio_file.wav'
 filename = 'otpuskai-tri-dnya-dozdya-slowed-and-reverb.mp3'
